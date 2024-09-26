@@ -14,7 +14,7 @@ func (d DigitArray) Size() int {
 
 // Get a value at an index in the DigitArray.
 func (d DigitArray) Get(index int) (int8, error) {
-    if index < 0 || index < len(d) {
+    if index < 0 || index >= len(d) {
         panic("Index out of bounds")
     }
     return d[index], nil
